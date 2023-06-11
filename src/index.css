@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.like {
+  clip-path: polygon(100% 6%, 0 6%, 0 100%);
+}
+
+.preSale {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+  background: rgba(52, 52, 52, 0.463);
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: rgb(0, 0, 0) !important;
+  background: rgba(255, 255, 255, 0.57);
+}
