@@ -1,11 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "../RootLayout/RootLayout";
-import Product from "../Product/pages/Product";
-import ProductDetail from "../Product/pages/ProductDetail";
-import Solution from "../Solution/Solution";
-import NavBar from "../Common/components/NavBar";
-import Cart from "../Cart/Cart";
-import Inquiry from "../Inquiry/Inquiry";
+
+import { ProductRouter } from "../Layout/ProductRouter/ProductRouter";
+import { SolutionRouter } from "../Layout/SolutionRouter/SolutionRouter";
+import { InquiryRouter } from "../Layout/InquiryRouter/InquiryRouter";
+import NavBar from "../Common/NavBar/NavBar";
+import Cart from "../Common/Cart/Cart";
 export const router = createBrowserRouter([
   {
     element: (
@@ -14,44 +13,6 @@ export const router = createBrowserRouter([
         <Cart />
       </>
     ),
-    children: [
-      {
-        element: <RootLayout />,
-        children: [
-          {
-            path: "/products/search?",
-            element: (
-              <>
-                <Product />
-              </>
-            ),
-          },
-          {
-            path: "/products/:id",
-            element: (
-              <>
-                <ProductDetail />
-              </>
-            ),
-          },
-        ],
-      },
-      {
-        path: "/solution",
-        element: (
-          <>
-            <Solution />
-          </>
-        ),
-      },
-      {
-        path: "/inquiry",
-        element: (
-          <>
-            <Inquiry />
-          </>
-        ),
-      },
-    ],
+    children: [ProductRouter, SolutionRouter, InquiryRouter],
   },
 ]);
