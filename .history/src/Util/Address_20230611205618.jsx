@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { products } from "../../../products";
 
 export default function Address() {
   const { pathname } = useLocation();

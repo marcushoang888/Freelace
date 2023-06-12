@@ -9,6 +9,7 @@ export default function OurStory() {
     return (
         <div>
             <Header imgUrl={'/story.webp'}/>
+            <Address/>
             <Container>
                 <StoryBody/>
                 <div className='bg-[#f8f8f8] pt-[50px] px-[30px]'>
